@@ -5,6 +5,8 @@ gem 'rails',                            '2.3.4'
 
 gem 'mechanize',                        '1.0.0'                    
 gem 'nokogiri',                         '1.4.1'
+gem 'haml',                             '2.2.17'
+gem 'compass',                          '0.8.17'
 
 gem 'mysql',                            '>= 2.8.1'
 gem 'htmldiff'

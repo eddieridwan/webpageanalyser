@@ -1,3 +1,5 @@
+require 'mechanize'
+
 class PageAnalyser
   def initialize(url)
     @url = url

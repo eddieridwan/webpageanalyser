@@ -1,0 +1,17 @@
+- content_for :content do
+  #main.container
+    #messages
+      - display_flash(:notice, :error, :warning)
+    #page{:class => content_given?(:sidebar) ? 'pane' : nil}
+      .header
+        %h1
+          = @page_title
+
+      #contents
+        = yield
+
+    - if content_given?(:sidebar)
+      #sidebar
+        = yield :sidebar
+
+= render :file => 'layouts/application'

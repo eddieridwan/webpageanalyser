@@ -1,0 +1,16 @@
+!!! Strict
+%html{ :xmlns =>'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en', :lang => 'en' }
+
+  %head
+    %meta{ 'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8' }
+    %title= @page_title || 'Web Page Analyser'
+    = stylesheet_link_tag '/stylesheets/screen.css'
+    = yield :stylesheet_includes
+
+  %body{:class => "#{@body_class}"}
+    #root
+      = yield :content
+      #root_footer
+
+    #footer
+      = "&copy; #{Time.now.year} Zoominti"

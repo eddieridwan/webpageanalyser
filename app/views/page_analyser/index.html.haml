@@ -1,3 +1,13 @@
 %h1 Links
-- @links.each do |l|
-  = l.text
+  
+%table
+  %tr
+    %th Title
+    %th URL
+    %th Actions
+  - @links.each do |l|
+    %tr
+      %td= l.text
+      %td= l.href
+      %td= link_to 'Analyse', {:action => 'show', :id => 1, :url => l.href}
+  
