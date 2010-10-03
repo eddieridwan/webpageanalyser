@@ -34,16 +34,17 @@ class PageAnalyser
   end
   
   def links
-    @page.links if file_type = "html"
+    @page.links if file_type == "html"
   end
   
   def host
-    URI.parse(@url).host
+    h = Host.find_by_name(URI.parse(@url).host) 
+    h ? h : Host.create(:name => URI.parse(@url).host)
   end
   
   def external_links
     if file_type == "html"
-      self.links.reject {|l| l.href.blank? || l.href.match(/#{self.host}/) || l.href.match(/javascript\:/) || URI.parse(l.href).scheme != "http"}
+      self.links.reject {|l| l.href.blank? || l.href.match(/#{self.host.name}/) || l.href.match(/javascript\:/) || URI.parse(l.href).scheme != "http"}
     end
   end
   

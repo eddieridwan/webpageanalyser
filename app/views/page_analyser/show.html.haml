@@ -8,13 +8,13 @@
     %td= @page.title
   %tr
     %th Domain name
-    %td= @page.host
+    %td= @page.host.name
   %tr
     %th Home
     %td= @page.site.home.present? ? link_to(@page.site.home.href, @page.site.home.href) : "No home page found"
   %tr
     %th Enterprise type
-    %td= @page.site.enterprise_type
+    %td= @page.host.enterprise_type
     
 %h2 Links
 

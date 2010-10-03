@@ -7,19 +7,6 @@ class Site
     @page = agent.get(url)
   end
   
-  def enterprise_type
-    case 
-    when URI.parse(@url).host.match(/\.edu(\.)*(.*)$/)
-      "Educational"
-    when URI.parse(@url).host.match(/\.org(\.)*(.*)$/)
-      "Non-commercial"
-    when URI.parse(@url).host.match(/\.gov(\.)*(.*)$/)
-      "Government"
-    when URI.parse(@url).host.match(/\.com(\.)*(.*)$/)
-      "Commercial"
-    end
-  end
-  
   def home
     h = @page.links.select {|l| l.text.match(/(H|h)ome|HOME/)}.first
     if h.present? && h.href.starts_with?('/') 

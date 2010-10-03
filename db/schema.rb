@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100925121320) do
+ActiveRecord::Schema.define(:version => 20101003074941) do
+
+  create_table "hosts", :force => true do |t|
+    t.string   "name"
+    t.text     "sample_content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pages", :force => true do |t|
     t.string   "url"

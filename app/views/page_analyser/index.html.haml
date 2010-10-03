@@ -1,13 +1,18 @@
 %h1 Links
-  
-%table
-  %tr
-    %th Title
-    %th URL
-    %th Actions
-  - @links.each do |l|
+
+- if params[:group_by].blank?
+  %table
     %tr
-      %td= l.text
-      %td= link_to l.href, l.href
-      %td= link_to 'Analyse', {:action => 'show', :id => 1, :url => l.href}
+      %th Title
+      %th URL
+      %th Actions
+    - @links.each do |l|
+      %tr
+        %td= l.text
+        %td= link_to l.href, l.href
+        %td= link_to 'Analyse', {:action => 'show', :id => 1, :url => l.href}
+- else
+  %p Links grouped by domain
+  - @grouped_links.keys.each do |g|
+    %p= g
   
