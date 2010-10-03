@@ -8,6 +8,6 @@
   - @links.each do |l|
     %tr
       %td= l.text
-      %td= l.href
+      %td= link_to l.href, l.href
       %td= link_to 'Analyse', {:action => 'show', :id => 1, :url => l.href}
   

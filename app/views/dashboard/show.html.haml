@@ -1,1 +1,7 @@
 %h1 Web page analyser
+
+- form_tag page_analyser_index_path, :method => :get, :id => "search-form" do
+  %fieldset
+    = label_tag :q, "Search"
+    %input(type="search" id="q" name="q" value="#{params[:q].present? ? h(params[:q]) : nil}")
+    = submit_tag "Go"

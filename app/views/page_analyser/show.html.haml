@@ -9,3 +9,22 @@
   %tr
     %th Domain name
     %td= @page.host
+  %tr
+    %th Home
+    %td= @page.site.home.present? ? link_to(@page.site.home.href, @page.site.home.href) : "No home page found"
+  %tr
+    %th Enterprise type
+    %td= @page.site.enterprise_type
+    
+%h2 Links
+
+%table
+  %tr
+    %th Title
+    %th URL
+  - @page.external_links.each do |l|
+    %tr
+      %td= l.text
+      %td= link_to l.href, l.href
+
+  
