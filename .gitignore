@@ -16,3 +16,6 @@ bin
 rerun.txt
 webrat-*
 .rvmrc
+.tmp*
+.loadpath
+.project

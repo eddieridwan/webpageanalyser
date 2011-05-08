@@ -1,15 +1,13 @@
 source 'http://rubygems.org'
 source 'http://gems.github.com'
 
-gem 'rails',                            '2.3.4'
+gem 'rails',                            '2.3.11'
 
-gem 'mechanize',                        '1.0.0'                    
-gem 'nokogiri',                         '1.4.1'
-gem 'haml',                             '2.2.17'
 gem 'compass',                          '0.8.17'
-
+gem 'haml',                             '2.2.17'
+gem 'mechanize',                        '1.0.0'                    
 gem 'mysql',                            '>= 2.8.1'
-gem 'htmldiff'
+gem 'nokogiri',                         '1.4.1'
 
 
 group :dev do
@@ -24,6 +22,5 @@ group :dev do
   gem 'pickle',                         '0.2.1'
   gem 'database_cleaner',               '0.2.3'
   gem 'faker',                          '0.3.1'
-  gem 'rcov'
   gem 'mongrel'
 end
