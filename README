@@ -6,3 +6,21 @@ Analyses web pages and extracts various properties as an aid to future categoris
 rake db:create:all
 rake db:schema:load
 
+
+Setup =======
+
+Rails 2.3.11
+Requires patch to fix problems with cookies and redirects when running on Mongrel 1.1.5.
+The patch is at https://gist.github.com/826692 => config/initializers/mongrel.rb
+See also the following discussion thread: https://rails.lighthouseapp.com/projects/8994/tickets/4690
+
+The git repository is at https://github.com/eddieridwan/ILR
+
+Deploy ======
+
+Hosted at https://ns40.mochahost.com:2083/, basic shared hosting service.
+Deploy using FTP
+There is no ssh or command line access. So have to manually create the database using
+cpanel Mysql facilities.
+
+Todo: look at ways to make db changes locally and then push to the server.
