@@ -19,3 +19,4 @@ webrat-*
 .tmp*
 .loadpath
 .project
+vendor/gems/*
