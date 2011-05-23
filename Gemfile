@@ -6,11 +6,10 @@ gem 'rails',                            '2.3.11'
 gem 'compass',                          '0.8.17'
 gem 'haml',                             '2.2.17'
 gem 'mechanize',                        '1.0.0'                    
-gem 'mysql',                            '>= 2.8.1'
 gem 'nokogiri',                         '1.4.1'
 
-
 group :dev do
+  gem 'mysql',                          '>= 2.8.1'
   gem 'sqlite3-ruby',                   '1.2.5'   # 1.3.0 breaks the integrity server
   gem 'cucumber',                       '0.6.2'
   gem 'cucumber-rails',                 '0.2.4'
